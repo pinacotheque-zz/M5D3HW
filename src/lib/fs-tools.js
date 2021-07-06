@@ -4,10 +4,10 @@ import { dirname, join } from 'path'
 
 const { readJSON, writeJSON, writeFile } = fs
 
-const authorsJSONPath = join(dirname(fileURLToPath(import.meta.url)), "../../data/authors.json")
-const blogsJSONPath = join(dirname(fileURLToPath(import.meta.url)), "../../data/blogs.json")
+const authorsJSONPath = join(dirname(fileURLToPath(import.meta.url)), "../data/authors.json")
+const blogsJSONPath = join(dirname(fileURLToPath(import.meta.url)), "../data/blogs.json")
 
-const authorsPublicFolderPath = join(dirname(fileURLToPath(import.meta.url)), "../../public")
+export const publicFolderPath = join(dirname(fileURLToPath(import.meta.url)), "../../public")
 
 export const getAuthors = () => readJSON(authorsJSONPath)
 export const getBlogs = () => readJSON(blogsJSONPath)
